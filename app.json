@@ -1,0 +1,79 @@
+{
+  "name": "whatsapp-bot (magic-bot)",
+  "description": " Whatsapp bot.",
+  "keywords": [
+    "whatsapp bot"
+  ],
+  "repository": "https://github.com/deadsoul101/magic-bot",
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "session id",
+      "required": true,
+      "value": ""
+    },
+    "SUDO": {
+      "description": "admin",
+      "required": true,
+      "value": "null"
+    },
+    "MODE": {
+      "description": "mode",
+      "required": true,
+      "value": "public"
+    },
+    "ALWAYS_ONLINE": {
+      "description": "show bot number last seen as online",
+      "required": false,
+      "value": "false"
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name, same as above entered",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku account api key, https://dashboard.heroku.com/account",
+      "required": true
+    },
+    "LOG_MSG": {
+      "description": "Show whatsapp msgs in log",
+      "required": false,
+      "value": "false"
+    },
+    "PREFIX": {
+      "description": "prefix for bot. all so can be null or false multi prefix",
+      "required": true,
+      "value": "."
+    },
+    "BOT_INFO": {
+      "description": "botname;ownername;ownernumber;image url",
+      "required": true,
+      "value": "XACKER;JUNAID;+13133334412;https://i.imgur.com/wyXaJ6a.jpeg"
+    },
+    "STICKER_DATA": {
+      "description": "sticker package name",
+      "required": true,
+      "value": "XACKER;JUNAID"
+    },
+    "AUDIO_DATA": {
+      "description": "audio package name",
+      "required": true,
+      "value": "XACKER;JUNAID;+13133334412;https://i.imgur.com/wyXaJ6a.jpeg"
+    },
+    "READ_COMMAND": {
+      "description": "Read all commands",
+      "required": false,
+      "value": "false"
+    },
+  "ERROR_MESSAGE": {
+      "description": "get error alert",
+      "required": false,
+      "value": "true"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
+}
